@@ -1,0 +1,12 @@
+pandas>=2.1
+numpy>=1.26
+geopandas>=0.14
+pyproj>=3.6
+shapely>=2.0
+fiona>=1.9
+matplotlib>=3.7
+seaborn>=0.12
+tqdm
+jupyter
+python-dateutil
+pytz
