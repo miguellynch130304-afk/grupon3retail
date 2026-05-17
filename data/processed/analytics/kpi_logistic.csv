@@ -1,0 +1,8 @@
+KPI,Value,Unit,Date_Calculated
+Average Delivery Time,13.8,days,2026-05-16
+On-Time Delivery Rate,91.81,%,2026-05-16
+Late Delivery Rate,8.19,%,2026-05-16
+Average Late Delivery Days,49.62,days,2026-05-16
+Total Orders Processed,99441.0,orders,2026-05-16
+Cancelled Orders Rate,0.0,%,2026-05-16
+Return/Unavailable Rate,0.61,%,2026-05-16
