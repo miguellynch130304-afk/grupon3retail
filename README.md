@@ -1,6 +1,5 @@
 **Proyecto**
 - **Título:**: Pipeline Híbrido de Ingesta y Data Wrangling para la Optimización de la Eficiencia Logística y Análisis Comercial en el Sector Retail
-- **Repositorio:**: Grupo N°3 - Programacion para Ciencia de Datos
 
 **Resumen Ejecutivo**
 - **Descripción:**: Orquestador end-to-end que consolida fuentes heterogéneas (CSV + JSON), realiza limpieza, deduplicación, imputación y cálculo de KPIs en Python y produce visualizaciones avanzadas en R.
@@ -70,18 +69,10 @@ python master_pipeline.py
 - **Tiempo total de ejecución (ejemplo):**: ~151.25 segundos (ingesta → visualización)
 - **KPIs destacados:**: tiempo medio de entrega ≈ 13.8 días; satisfacción media ≈ 4.09/5; ingresos totales ≈ 9.3M BRL.
 
-**Contribuyentes**
-- **Integrantes:**: Miguel Ángel Caballero Lynch, Ruben Osamu Tsukazan Nakaima, Willy Laurence Torres Bojorquez, Hugo Junior Valverde Chumbe, Rosmery Isabel Luna Tito, Saúl Yonathan López Huamán
-- **Docente:**: Mg. Juan Carlos Tovar Ueda
+**Contribuyentes:** Miguel Ángel Caballero Lynch, Ruben Osamu Tsukazan Nakaima, Willy Laurence Torres Bojorquez, Hugo Junior Valverde Chumbe, Rosmery Isabel Luna Tito, Saúl Yonathan López Huamán
 
 **Recomendaciones y siguientes pasos**
 - **Monitoreo:**: implementar alarmas para retrasos extremos y anomalías.
 - **Enriquecimiento:**: incorporar datos externos (económicos/logísticos).
 - **Despliegue liviano:**: usar `git lfs` o excluir `data/raw/` antes de publicar código público.
 - **Interfaz:**: desarrollar un tablero interactivo para usuarios ejecutivos.
-
-**Referencias**
-- Riahi et al. (2021), Taleb et al. (2018), McKinney (2010), Wickham (2009), R Core Team (2026), van der Walt et al. (2011).
-
-**Licencia**
-- Revisar y añadir la licencia deseada (por defecto no incluida).
