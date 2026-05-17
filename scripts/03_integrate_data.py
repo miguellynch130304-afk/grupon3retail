@@ -25,15 +25,15 @@ class DataIntegrator:
         datasets = {}
         
         parquet_files = {
-            'clientes': 'clientes_limpiados.parquet',
-            'pedidos': 'pedidos_limpiados.parquet',
-            'elementos_pedidos': 'elementos_pedidos_limpiados.parquet',
-            'pagos_pedidos': 'pagos_pedidos_limpiados.parquet',
-            'resenas_pedidos': 'resenas_pedidos_limpiados.parquet',
-            'productos': 'productos_limpiados.parquet',
-            'vendedores': 'vendedores_limpiados.parquet',
-            'geolocalizacion': 'geolocalizacion_limpiada.parquet',
-            'traduccion_categorias': 'traduccion_categorias_limpiada.parquet'
+            'customers': 'customers_cleaned.parquet',
+            'orders': 'orders_cleaned.parquet',
+            'order_items': 'order_items_cleaned.parquet',
+            'order_payments': 'order_payments_cleaned.parquet',
+            'order_reviews': 'order_reviews_cleaned.parquet',
+            'products': 'products_cleaned.parquet',
+            'sellers': 'sellers_cleaned.parquet',
+            'geolocation': 'geolocation_cleaned.parquet',
+            'category_translation': 'category_translation_cleaned.parquet'
         }
         
         for name, filename in parquet_files.items():
@@ -55,13 +55,13 @@ class DataIntegrator:
         logger.info("Creando tabla de análisis de pedidos...")
         
         # Comienza con pedidos
-        df = self.datasets['pedidos'].copy()
+        df = self.datasets['orders'].copy()
         logger.info(f"Iniciando con pedidos: {len(df)} filas")
         
         # 1. Información de clientes
-        if 'clientes' in self.datasets:
+        if 'customers' in self.datasets:
             df = df.merge(
-                self.datasets['clientes'][['customer_id', 'customer_unique_id', 
+                self.datasets['customers'][['customer_id', 'customer_unique_id', 
                                             'customer_zip_code_prefix', 'customer_city', 'customer_state']],
                 on='customer_id',
                 how='left',
@@ -70,8 +70,8 @@ class DataIntegrator:
             logger.info(f"Después del merge con clientes: {len(df)} filas")
         
         # 2. Elementos del pedido
-        if 'elementos_pedidos' in self.datasets:
-            order_items_agg = self.datasets['elementos_pedidos'].groupby('order_id').agg({
+        if 'order_items' in self.datasets:
+            order_items_agg = self.datasets['order_items'].groupby('order_id').agg({
                 'order_item_id': 'count',
                 'product_id': 'count',
                 'seller_id': 'nunique',

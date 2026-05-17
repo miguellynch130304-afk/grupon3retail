@@ -53,34 +53,34 @@ class AnalyticsEngine:
         
         kpis = {
             'KPI': [],
-            'Valor': [],
-            'Unidad': [],
-            'Fecha_Calculada': []
+            'Value': [],
+            'Unit': [],
+            'Date_Calculated': []
         }
         
         # 1. Tiempo promedio de entrega
         if 'delivery_time_days' in df.columns:
             avg_delivery = df['delivery_time_days'].mean()
             kpis['KPI'].append('Tiempo Promedio de Entrega')
-            kpis['Valor'].append(round(avg_delivery, 2))
-            kpis['Unidad'].append('días')
-            kpis['Fecha_Calculada'].append(datetime.now().date())
+            kpis['Value'].append(round(avg_delivery, 2))
+            kpis['Unit'].append('días')
+            kpis['Date_Calculated'].append(datetime.now().date())
         
         # 2. Tasa de entrega a tiempo
         if 'delivery_delay_days' in df.columns:
             on_time = (df['delivery_delay_days'] <= 0).sum() / len(df) * 100
             kpis['KPI'].append('Tasa de Entrega a Tiempo')
-            kpis['Valor'].append(round(on_time, 2))
-            kpis['Unidad'].append('%')
-            kpis['Fecha_Calculada'].append(datetime.now().date())
+            kpis['Value'].append(round(on_time, 2))
+            kpis['Unit'].append('%')
+            kpis['Date_Calculated'].append(datetime.now().date())
         
         # 3. Porcentaje de entregas tardías
         if 'delivery_delay_days' in df.columns:
             late_rate = (df['delivery_delay_days'] > 0).sum() / len(df) * 100
             kpis['KPI'].append('Tasa de Entregas Tardías')
-            kpis['Valor'].append(round(late_rate, 2))
-            kpis['Unidad'].append('%')
-            kpis['Fecha_Calculada'].append(datetime.now().date())
+            kpis['Value'].append(round(late_rate, 2))
+            kpis['Unit'].append('%')
+            kpis['Date_Calculated'].append(datetime.now().date())
         
         # 4. Promedio de días de retraso en entregas tardías
         if 'delivery_delay_days' in df.columns:

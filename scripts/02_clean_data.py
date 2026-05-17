@@ -278,9 +278,9 @@ def run_cleaning_phase() -> dict:
     try:
         df_customers = pd.read_csv(CUSTOMERS_CSV)
         df_customers = clean_customers(df_customers)
-        df_customers.to_parquet(CLEANED_DATA_DIR / "clientes_limpiados.parquet", index=False)
-        cleaned_datasets['clientes'] = df_customers
-        logger.info(f"Guardado: {CLEANED_DATA_DIR / 'clientes_limpiados.parquet'}")
+        df_customers.to_parquet(CLEANED_DATA_DIR / "customers_cleaned.parquet", index=False)
+        cleaned_datasets['customers'] = df_customers
+        logger.info(f"Saved: {CLEANED_DATA_DIR / 'customers_cleaned.parquet'}")
     except Exception as e:
         logger.error(f"Error limpiando clientes: {e}")
     
