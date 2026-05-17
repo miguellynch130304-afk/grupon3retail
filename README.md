@@ -71,7 +71,7 @@ python master_pipeline.py
 **Contribuyentes:** Miguel Ángel Caballero Lynch, Ruben Osamu Tsukazan Nakaima, Willy Laurence Torres Bojorquez, Hugo Junior Valverde Chumbe, Rosmery Isabel Luna Tito, Saúl Yonathan López Huamán
 
 **Recomendaciones y siguientes pasos**
-- **Monitoreo:**: implementar alarmas para retrasos extremos y anomalías.
-- **Enriquecimiento:**: incorporar datos externos (económicos/logísticos).
-- **Despliegue liviano:**: usar `git lfs` o excluir `data/raw/` antes de publicar código público.
-- **Interfaz:**: desarrollar un tablero interactivo para usuarios ejecutivos.
+- **Monitoreo:** implementar alarmas para retrasos extremos y anomalías.
+- **Enriquecimiento:** incorporar datos externos (económicos/logísticos).
+- **Despliegue liviano:** usar `git lfs` o excluir `data/raw/` antes de publicar código público.
+- **Interfaz:** desarrollar un tablero interactivo para usuarios ejecutivos.
